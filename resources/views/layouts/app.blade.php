@@ -78,6 +78,14 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="fixed-bottom">
+            <center>
+                Copyright &copy; Larapus Made With Love <br>
+                Developed by <a href="#">Dina Amelia</a> -
+                {{date('Y')}}
+            </center>
+        </footer>
     </div>
 </body>
 </html>
