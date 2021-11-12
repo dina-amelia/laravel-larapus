@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthorController;
 
 
 
@@ -44,3 +45,6 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']],
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index2'])->name('home2');
 });
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('author', AuthorController::class);
